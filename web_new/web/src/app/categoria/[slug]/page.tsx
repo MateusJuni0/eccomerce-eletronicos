@@ -1,7 +1,5 @@
-"use client";
-
-import { motion } from 'framer-motion';
 import { ProductCard } from '@/components/ProductCard';
+import { supabase } from '@/lib/supabase';
 
 type CategoryPageProps = {
   params: {
@@ -47,7 +45,10 @@ const nicheThemes: Record<string, { gradient: string; title: string; textColor: 
   },
 };
 
-const CategoryPage = ({ params }: CategoryPageProps) => {
+// Use ISR revalidation
+export const revalidate = 60;
+
+const CategoryPage = async ({ params }: CategoryPageProps) => {
   const { slug } = params;
   const theme = nicheThemes[slug] || {
     gradient: 'from-gray-900 to-black',
@@ -55,45 +56,44 @@ const CategoryPage = ({ params }: CategoryPageProps) => {
     textColor: 'text-white'
   };
 
-  const mockProducts = [
-    {
-      name: 'GeForce RTX 4090 SUPRIM X',
-      images: ['https://picsum.photos/seed/gpu1-1/800/600', 'https://picsum.photos/seed/gpu1-2/800/600', 'https://picsum.photos/seed/gpu1-3/800/600'],
-      price: '2.299,99 €'
-    },
-    {
-        name: 'Radeon RX 7900 XTX',
-        images: ['https://picsum.photos/seed/gpu2-1/800/600', 'https://picsum.photos/seed/gpu2-2/800/600', 'https://picsum.photos/seed/gpu2-3/800/600'],
-        price: '1.099,99 €'
-    },
-    {
-        name: 'GeForce RTX 4080 Super',
-        images: ['https://picsum.photos/seed/gpu3-1/800/600', 'https://picsum.photos/seed/gpu3-2/800/600', 'https://picsum.photos/seed/gpu3-3/800/600'],
-        price: '1.299,99 €'
-    }
-  ];
+  // Fetch real data from the self-hosted Supabase VPS
+  // O schema é ecommerce, não public, let's query the specific schema by adding schema('ecommerce')
+  const { data: products, error } = await supabase
+    .schema('ecommerce')
+    .from('products')
+    .select('*')
+    .eq('category', slug)
+    .limit(20);
+
+  if (error) {
+    console.error("Supabase Error:", error);
+  }
 
   return (
     <div className={`min-h-screen bg-gradient-to-br ${theme.gradient} pt-32 p-8`}>
       <div className="max-w-7xl mx-auto">
-        <motion.h1
+        <h1
           className={`text-5xl md:text-7xl font-black mb-16 text-center tracking-tighter ${theme.textColor}`}
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
         >
           {theme.title}
-        </motion.h1>
+        </h1>
+
+        {(!products || products.length === 0) && (
+          <p className="text-white text-center text-xl">Nenhum produto encontrado nesta categoria.</p>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {mockProducts.map((product, index) => (
-            <ProductCard
-              key={index}
-              name={product.name}
-              images={product.images}
-              price={product.price}
-            />
-          ))}
+          {products?.map((product, index) => {
+            const priceFormatted = new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR' }).format(product.price);
+            return (
+              <ProductCard
+                key={product.id || index}
+                name={product.title}
+                images={product.images || ['https://picsum.photos/seed/placeholder/800/600']}
+                price={priceFormatted}
+              />
+            );
+          })}
         </div>
       </div>
     </div>
