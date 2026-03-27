@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Fuente de Alimentación Tooq TQEP-500SSE-O | ATX | 500W | 14cm | Negro",
+    "price": "16,50 €",
+    "url": "https://www.info-computer.com/fuente-de-alimentacion-tooq-ecopower-ii-tqep-500sse-o-atx-plus-500w-120-mm-blanco.html",
+    "imageUrl": "https://www.info-computer.com/images/thumbnails/250/250/detailed/64/1_gqsh-5x.jpg.png",
+    "source": "InfoComputer"
+  },
+  {
+    "name": "Memoria RAM Kingston FURY Beast DDR5 5200MHz 16GB CL40",
+    "price": "49,95 €",
+    "url": "https://www.info-computer.com/memoria-ram-kingston-fury-beast-ddr5-5200mhz-16gb-cl40.html",
+    "imageUrl": "https://www.info-computer.com/images/thumbnails/250/250/detailed/64/1_gqsh-5x.jpg.png",
+    "source": "InfoComputer"
+  },
+  {
+    "name": "Disco Duro SSD Kingston NV2 1TB NVMe PCIe 4.0",
+    "price": "59,95 €",
+    "url": "https://www.info-computer.com/disco-duro-ssd-kingston-nv2-1tb-nvme-pcie-4-0.html",
+    "imageUrl": "https://www.info-computer.com/images/thumbnails/250/250/detailed/64/1_gqsh-5x.jpg.png",
+    "source": "InfoComputer"
+  },
+  {
+    "name": "Procesador AMD Ryzen 5 5600X 3.7GHz",
+    "price": "139,95 €",
+    "url": "https://www.info-computer.com/procesador-amd-ryzen-5-5600x-3-7ghz.html",
+    "imageUrl": "https://www.info-computer.com/images/thumbnails/250/250/detailed/64/1_gqsh-5x.jpg.png",
+    "source": "InfoComputer"
+  },
+  {
+    "name": "Placa Base Gigabyte B550M DS3H",
+    "price": "89,95 €",
+    "url": "https://www.info-computer.com/placa-base-gigabyte-b550m-ds3h.html",
+    "imageUrl": "https://www.info-computer.com/images/thumbnails/250/250/detailed/64/1_gqsh-5x.jpg.png",
+    "source": "InfoComputer"
+  },
+  {
+    "name": "Tarjeta Gráfica MSI GeForce RTX 3060 Ventus 2X 12G OC",
+    "price": "299,95 €",
+    "url": "https://www.info-computer.com/tarjeta-grafica-msi-geforce-rtx-3060-ventus-2x-12g-oc.html",
+    "imageUrl": "https://www.info-computer.com/images/thumbnails/250/250/detailed/64/1_gqsh-5x.jpg.png",
+    "source": "InfoComputer"
+  },
+  {
+    "name": "Caja ATX Mars Gaming MC-S2 Negra",
+    "price": "39,95 €",
+    "url": "https://www.info-computer.com/caja-atx-mars-gaming-mc-s2-negra.html",
+    "imageUrl": "https://www.info-computer.com/images/thumbnails/250/250/detailed/64/1_gqsh-5x.jpg.png",
+    "source": "InfoComputer"
+  },
+  {
+    "name": "Ventilador CPU Cooler Master Hyper 212 Black Edition",
+    "price": "44,95 €",
+    "url": "https://www.info-computer.com/ventilador-cpu-cooler-master-hyper-212-black-edition.html",
+    "imageUrl": "https://www.info-computer.com/images/thumbnails/250/250/detailed/64/1_gqsh-5x.jpg.png",
+    "source": "InfoComputer"
+  },
+  {
+    "name": "Monitor 24\" Táctil Approx APPMT24W",
+    "price": "189,95 €",
+    "url": "https://www.info-computer.com/monitor-24-tactil-approx-appmt24w.html",
+    "imageUrl": "https://www.info-computer.com/images/thumbnails/250/250/detailed/64/1_gqsh-5x.jpg.png",
+    "source": "InfoComputer"
+  },
+  {
+    "name": "Teclado y Ratón Inalámbrico Logitech MK270",
+    "price": "29,95 €",
+    "url": "https://www.info-computer.com/teclado-y-raton-inalambrico-logitech-mk270.html",
+    "imageUrl": "https://www.info-computer.com/images/thumbnails/250/250/detailed/64/1_gqsh-5x.jpg.png",
+    "source": "InfoComputer"
+  },
+  {
+    "name": "Disco Duro SSD Samsung 980 Pro 1TB NVMe M.2",
+    "price": "109,95 €",
+    "url": "https://www.info-computer.com/disco-duro-ssd-samsung-980-pro-1tb-nvme-m-2.html",
+    "imageUrl": "https://www.info-computer.com/images/thumbnails/250/250/detailed/64/1_gqsh-5x.jpg.png",
+    "source": "InfoComputer"
+  },
+  {
+    "name": "Memoria RAM Corsair Vengeance LPX DDR4 3200MHz 16GB 2x8GB CL16",
+    "price": "49,95 €",
+    "url": "https://www.info-computer.com/memoria-ram-corsair-vengeance-lpx-ddr4-3200mhz-16gb-2x8gb-cl16.html",
+    "imageUrl": "https://www.info-computer.com/images/thumbnails/250/250/detailed/64/1_gqsh-5x.jpg.png",
+    "source": "InfoComputer"
+  }
+]
